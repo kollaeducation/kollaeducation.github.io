@@ -16,12 +16,19 @@
     <meta name="MobileOptimized" content="320">
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-    <title>About | Kolla.id</title>
+    <title>About | Kolla Education</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <script src="./assets/js/require.min.js"></script>
+    <script>
+        requirejs.config({
+            baseUrl: '.'
+        });
+    </script>
     <!-- Dashboard Core -->
     <link href="./assets/css/dashboard.css" rel="stylesheet" />
+    <script src="./assets/js/dashboard.js"></script>
 </head>
 
 <body class="">
@@ -50,36 +57,28 @@
                         <div class="col-lg order-lg-first">
                             <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                                 <li class="nav-item">
-                                    <a href="./index.html" title="Home" class="nav-link"><i class="fe fe-home"></i>
-                                        Home</a>
+                                    <a href="./index.html" class="nav-link"><i class="fe fe-home"></i> Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./about.html" title="About" class="nav-link active"><i
-                                            class="fe fe-list"></i>
+                                    <a href="./about.html" class="nav-link active"><i class="fe fe-feather"></i>
                                         About</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a href="./webinars.html" title="Webinars" class="nav-link"><i
-                                            class="fe fe-monitor"></i>
+                                <li class="nav-item">
+                                    <a href="./webinars.html" class="nav-link"><i class="fe fe-monitor"></i>
                                         Webinars</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a href="./courses.html" title="Courses" class="nav-link"><i
-                                            class="fe fe-message-square"></i>
+                                <li class="nav-item">
+                                    <a href="./courses.html" class="nav-link"><i class="fe fe-book-open"></i>
                                         Courses</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a href="./curricula.html" title="Curricula" class="nav-link"><i
-                                            class="fe fe-book-open"></i>
-                                        Curricula</a>
+                                <li class="nav-item">
+                                    <a href="./alumni.html" class="nav-link"><i class="fe fe-users"></i> Alumni</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./alumni.html" title="Alumni" class="nav-link"><i class="fe fe-users"></i>
-                                        Alumni</a>
+                                    <a href="./press.html" class="nav-link"><i class="fe fe-file-text"></i> Press</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./press.html" title="Press" class="nav-link"><i
-                                            class="fe fe-file-text"></i> Press</a>
+                                    <a href="./contact.html" class="nav-link"><i class="fe fe-mail"></i> Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -91,34 +90,82 @@
                 <div class="container">
                     <div class="page-header">
                         <h1 class="page-title">
-                            This page is under construction. <br>Please come back later. <br>Thank you :)
+                            About Kolla Education
                         </h1>
+                    </div>
+                    <div class="row row-cards">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3>History</h3>
+                                    <ul class="timeline">
+                                        <li class="timeline-item">
+                                            <div class="timeline-badge bg-red"></div>
+                                            <h5>Badan Ekonomi Kreatif (BEKRAF) collaborated with
+                                                7-Eleven
+                                                to hold Coding Mum for the first time.
+                                            </h5>
+                                            <div class="timeline-time text-muted-dark">2016</div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-badge"></div>
+                                            <h5>Kolla Education held training for Migrant Workers in Hongkong, Singapore
+                                                and
+                                                Kuala Lumpur.</h5>
+                                            <div class="timeline-time text-muted-dark">2017</div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-badge bg-primary"></div>
+                                            <div>
+                                                <h5>Kolla Education held training for several Orphanages in Jakarta.
+                                                </h5>
+                                            </div>
+                                            <div class="timeline-time text-muted-dark">2018</div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-badge"></div>
+                                            <h5>Kolla Education held training for several Pesantrens in Java.</h5>
+                                            <div class="timeline-time text-muted-dark">2019</div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-badge bg-green"></div>
+                                            <h5>Coding Mum has more than 1000 alumni spread across 30 cities.</h5>
+                                            <div class="timeline-time text-muted-dark">2020</div>
+                                        </li>
+                                    </ul>
+                                    <h3>Vision</h3>
+                                    <p>Build a generation of 1 thousand coders by 2021.<br>
+                                        Tackle the current global STEAMED Skills shortage
+                                        in marginalised communities.</p>
+                                    <h3>Mission</h3>
+                                    <ul>
+                                        <li>Build a good coding curriculum</li>
+                                        <li>Deliver lessons with modern pedagogy</li>
+                                        <li>Equip students with decent skills</li>
+                                        <li>Encourage students to teach their skills</li>
+                                        <li>Open new employment opportunities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <footer class="footer">
                 <div class="container">
                     <div class="row align-items-center flex-row-reverse">
-                        <div class="col-auto ml-lg-auto">
-                            <div class="row align-items-center">
-                                <div class="col-auto">
-                                    <a href="./contact.html" title="Contact" class="btn btn-yellow btn-sm"><i
-                                            class="fe fe-mail"></i>
-                                        <strong>CONTACT</strong></a>
-                                </div>
-                            </div>
+                        <div class="col-sm-2">
+                            <a href="./contact.html" title="Contact" class="btn btn-yellow btn-sm"><i
+                                    class="fe fe-mail"></i>
+                                <strong>CONTACT</strong></a>
                         </div>
-                        <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
+                        <div class="col-sm-10">
                             Copyright © 2020 <a href="./index.html" title="Kolla.ID"><strong>Kolla.ID</strong></a>.
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
-</body>
-
-</html>
-</div>
 </body>
 
 </html>
