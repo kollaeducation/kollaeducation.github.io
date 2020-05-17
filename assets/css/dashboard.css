@@ -21800,15 +21800,21 @@ svg {
   text-transform: none;
 }
 
+.partner-logo .card-body {
+    padding: 1rem;
+}
+
 .card-table tr th {
   padding-left: 0;
   padding-right: 0;
   height: 4.5rem;
   vertical-align: middle;
 }
+
 .card-table tr td {
   vertical-align: top;
 }
+
 .card-table tr th h3,
 .card-table tr th h4 {
   margin-bottom: 0;
