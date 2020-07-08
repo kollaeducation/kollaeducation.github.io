@@ -135,50 +135,58 @@
               </div>
             </div>
             <div class="col-md-8">
-              <form class="card">
-                <div class="card-body">
-                  <h3 class="card-title">We'll follow up</h3>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label class="form-label">My full name is</label>
-                        <input type="text" class="form-control" placeholder="Full Name">
+              <div class="card">
+                <form id="my-form" action="https://formspree.io/xpzagako" method="POST">
+                  <div class="card-body">
+                    <h3 class="card-title">We'll follow up</h3>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">My full name is</label>
+                          <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label class="form-label">My email address is</label>
-                        <input type="email" class="form-control" placeholder="username@example.com">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">My email address is</label>
+                          <input type="email" class="form-control" placeholder="username@example.com">
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label class="form-label">My phone number is</label>
-                        <input type="text" class="form-control" placeholder="(62) 812345678">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label class="form-label">My phone number is</label>
+                          <input type="text" class="form-control" placeholder="(62) 812345678">
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="form-label">I'm interested in</label>
-                        <select name="interest" id="select-interest" class="form-control custom-select">
-                          <option value="1">Chuck Testa</option>
-                          <option value="4">Sage Cattabriga-Alosa</option>
-                          <option value="3">Nikola Tesla</option>
-                        </select>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="form-label">I'm interested in</label>
+                          <select name="interest" id="select-interest" class="form-control custom-select">
+                            <option value="1">Serviced Office</option>
+                            <option value="2">Virtual Office</option>
+                            <option value="3">Meeting Room</option>
+                            <option value="4">Event Space</option>
+                            <option value="5">Curriculum</option>
+                            <option value="6">Online Class</option>
+                            <option value="7">Website Development</option>
+                            <option value="8">App Development</option>
+                          </select>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group mb-0">
-                        <label class="form-label">My notes</label>
-                        <textarea rows="3" class="form-control" placeholder="My notes insertBefore"></textarea>
+                      <div class="col-md-12">
+                        <div class="form-group mb-0">
+                          <label class="form-label">My notes</label>
+                          <textarea rows="3" class="form-control" placeholder=""></textarea>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card-footer text-right">
-                  <button type="submit" class="btn btn-primary">Send message</button>
-                </div>
-              </form>
+                  <div class="card-footer text-right">
+                    <button type="submit" class="btn btn-primary" id="my-form-button">Send message</button>
+                  </div>
+                  <p id="my-form-status"></p>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -218,6 +226,54 @@
       })();
     </script>
     <!-- /GetButton.io widget -->
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("my-form");
+        var button = document.getElementById("my-form-button");
+        var status = document.getElementById("my-form-status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+          form.reset();
+          button.style = "display: none ";
+          status.innerHTML = "Thanks!";
+        }
+
+        function error() {
+          status.innerHTML = "Oops! There was a problem.";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+        });
+      });
+
+      // helper function for sending an AJAX request
+
+      function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
+        };
+        xhr.send(data);
+      }
+    </script>
 </body>
 
 </html>
