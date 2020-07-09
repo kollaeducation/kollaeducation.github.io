@@ -2,6 +2,16 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104353031-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-104353031-2');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -102,41 +112,9 @@
             </h1>
           </div>
           <div class="row row-cards">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="media mb-5">
-                    <div class="media-body">
-                      <h3>Kolla Space</h3>
-                      <address class="text-muted">
-                        Jl. H. Agus Salim No.32B<br>
-                        (samping Alfamart Sabang)<br>
-                        Kebon Sirih, Menteng<br>
-                        Central Jakarta 10340<br>
-                        Indonesia
-                      </address>
-                      <h4>Phone</h4>
-                      <p>(62) 021 5020-1021<br>
-                        (62) 878 8002-0021 (WA)
-                      </p>
-                      <h4>Website</h4>
-                      <p><a href="https://kolla.id" title="www.kolla.id" target="_blank">www.kolla.id</a><br><a
-                          href="https://kollaspace.com" title="www.kollaspace.com"
-                          target="_blank">www.kollaspace.com</a>
-                      </p>
-                      <h4>Social Media</h4>
-                      <a href="https://www.instagram.com/kollaspace/" title="www.instagram.com/kollaspace/"
-                        target="_blank">IG:
-                        @kollaspace</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="col-md-8">
               <div class="card">
-                <form id="my-form-stop" action="https://formspree.io/xpzagako" method="POST">
+                <form id="kolla-form-contact-stop" action="https://formspree.io/xpzagako" method="POST">
                   <div class="card-body">
                     <h3 class="card-title">We'll follow up</h3>
                     <div class="row">
@@ -182,10 +160,43 @@
                     </div>
                   </div>
                   <div class="card-footer text-right">
-                    <button type="submit" class="btn btn-primary" id="my-form-button">Send message</button>
+                    <button type="submit" class="btn btn-primary" id="kolla-form-contact-button">Send message</button>
                   </div>
-                  <h3 id="my-form-status"></h3>
+                  <div class="alert alert-info kolla-form-contact-status" role="alert" id="kolla-form-contact-status">
+                  </div>
                 </form>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <div class="media mb-5">
+                    <div class="media-body">
+                      <h3>Kolla Space</h3>
+                      <address class="text-muted">
+                        Jl. H. Agus Salim No.32B<br>
+                        (samping Alfamart Sabang)<br>
+                        Kebon Sirih, Menteng<br>
+                        Central Jakarta 10340<br>
+                        Indonesia
+                      </address>
+                      <h4>Phone</h4>
+                      <p>(62) 021 5020-1021<br>
+                        (62) 878 8002-0021 (WA)
+                      </p>
+                      <h4>Website</h4>
+                      <p><a href="https://kolla.id" title="www.kolla.id" target="_blank">www.kolla.id</a><br><a
+                          href="https://kollaspace.com" title="www.kollaspace.com"
+                          target="_blank">www.kollaspace.com</a>
+                      </p>
+                      <h4>Social Media</h4>
+                      <a href="https://www.instagram.com/kollaspace/" title="www.instagram.com/kollaspace/"
+                        target="_blank">IG:
+                        @kollaspace</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -232,9 +243,9 @@
 
         // get the form elements defined in your form HTML above
 
-        var form = document.getElementById("my-form");
-        var button = document.getElementById("my-form-button");
-        var status = document.getElementById("my-form-status");
+        var form = document.getElementById("kolla-form-contact");
+        var button = document.getElementById("kolla-form-contact-button");
+        var status = document.getElementById("kolla-form-contact-status");
 
         // Success and Error functions for after the form is submitted
 
