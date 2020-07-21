@@ -116,7 +116,9 @@
               <div class="card">
                 <form id="kolla-form-contact" action="https://formspree.io/xpzagako" method="POST">
                   <div class="card-body">
-                    <h3 class="card-title">We'll follow up</h3>
+                    <div class="alert kolla-form-contact-status" role="alert" id="kolla-form-contact-status">
+                    </div>
+                    <h3 class="card-title" id="kolla-form-contact-status-default">We'll follow up</h3>
                     <div class="row">
                       <div class="col-12">
                         <div class="form-group">
@@ -163,8 +165,6 @@
                   </div>
                   <div class="card-footer text-right">
                     <button type="submit" class="btn btn-primary" id="kolla-form-contact-button">Send message</button>
-                  </div>
-                  <div class="alert kolla-form-contact-status" role="alert" id="kolla-form-contact-status">
                   </div>
                 </form>
                 <!-- <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
@@ -255,17 +255,19 @@
         var form = document.getElementById("kolla-form-contact");
         var button = document.getElementById("kolla-form-contact-button");
         var status = document.getElementById("kolla-form-contact-status");
+        var statusDefault = document.getElementById("kolla-form-contact-status-default");
 
         // Success and Error functions for after the form is submitted
 
         function success() {
           form.reset();
           button.style = "display: none ";
-          status.innerHTML = "Thanks!";
+          statusDefault.style = "display: none ";
+          status.innerHTML = "<h4 style='text-align:center'>Thanks! We will follow up.</h4>";
         }
 
         function error() {
-          status.innerHTML = "Oops! There was a problem.";
+          status.innerHTML = "<h4 style='text-align:center'>Oops! There was a problem.</h4>";
         }
 
         // handle the form submission event
