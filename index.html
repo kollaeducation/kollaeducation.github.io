@@ -1,702 +1,979 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-104353031-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104353031-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "UA-104353031-2");
+    </script>
 
-    gtag('config', 'UA-104353031-2');
-  </script>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="theme-color" content="#4188c9" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <title>
+      Empowering People in Digital Literacy and Technology | Kolla Education
+    </title>
+    <meta
+      name="description"
+      content="Empowering People in Digital Literacy and Technology"
+    />
+    <meta property="og:title" content="Kolla Education" />
+    <meta property="og:url" content="//kolla.id" />
+    <meta
+      property="og:description"
+      content="Empowering People in Digital Literacy and Technology"
+    />
+    <meta
+      property="og:image"
+      content="//kolla.id/assets/images/logo/logo-kolla.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext"
+    />
+    <script src="./assets/js/require.min.js"></script>
+    <script>
+      requirejs.config({
+        baseUrl: ".",
+      });
+    </script>
+    <!-- Dashboard Core -->
 
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta http-equiv="Content-Language" content="en" />
-  <meta name="msapplication-TileColor" content="#2d89ef" />
-  <meta name="theme-color" content="#4188c9" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-  <title>
-    Empowering People in Digital Literacy and Technology | Kolla Education
-  </title>
-  <meta name="description" content="Empowering People in Digital Literacy and Technology" />
-  <meta property="og:title" content="Kolla Education" />
-  <meta property="og:url" content="//kolla.id" />
-  <meta property="og:description" content="Empowering People in Digital Literacy and Technology" />
-  <meta property="og:image" content="//kolla.id/assets/images/logo/logo-kolla.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext" />
-  <script src="./assets/js/require.min.js"></script>
-  <script>
-    requirejs.config({
-      baseUrl: ".",
-    });
-  </script>
-  <!-- Dashboard Core -->
+    <link href="./assets/css/dashboard.css" rel="stylesheet" />
+    <script src="./assets/js/dashboard.js"></script>
+  </head>
 
-  <link href="./assets/css/dashboard.css" rel="stylesheet" />
-  <script src="./assets/js/dashboard.js"></script>
-</head>
-
-<body class="">
-  <div class="page">
-    <div class="flex-fill">
-      <!-- Start Logo -->
-      <div class="header py-4">
-        <div class="container">
-          <div class="d-flex">
-            <a class="header-brand" href="./index.html">
-              <img src="./assets/images/logo/logo-kolla-education.png" class="header-brand-img" alt="tabler logo" />
-            </a>
-            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse"
-              data-target="#headerMenuCollapse">
-              <span class="header-toggler-icon"></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- End Logo -->
-      <!-- Start Navigation -->
-      <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg order-lg-first">
-              <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-                <li class="nav-item">
-                  <a href="./index.html" class="nav-link active"><i class="fe fe-home"></i> Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./services.html" class="nav-link"><i class="fe fe-layout"></i> Services</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./webinars.html" class="nav-link"><i class="fe fe-monitor"></i> Webinars</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./courses.html" class="nav-link"><i class="fe fe-book-open"></i> Courses</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./news.html" class="nav-link"><i class="fe fe-file-text"></i> News</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./alumni.html" class="nav-link"><i class="fe fe-users"></i> Alumni</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./about.html" class="nav-link"><i class="fe fe-feather"></i> About</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./contact.html" class="nav-link"><i class="fe fe-mail"></i> Contact</a>
-                </li>
-              </ul>
+  <body class="">
+    <div class="page">
+      <div class="flex-fill">
+        <!-- Start Logo -->
+        <div class="header py-4">
+          <div class="container">
+            <div class="d-flex">
+              <a class="header-brand" href="./index.html">
+                <img
+                  src="./assets/images/logo/logo-kolla-education.png"
+                  class="header-brand-img"
+                  alt="tabler logo"
+                />
+              </a>
+              <a
+                href="#"
+                class="header-toggler d-lg-none ml-3 ml-lg-0"
+                data-toggle="collapse"
+                data-target="#headerMenuCollapse"
+              >
+                <span class="header-toggler-icon"></span>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <!-- End Navigation -->
-      <!-- Start Services -->
-      <div class="my-3 my-md-5">
-        <div class="container">
-          <div class="page-header">
-            <h3 class="page-title">
-              Services
-            </h3>
-            <div class="page-subtitle">
-              <a href="./services.html">See all Services</a>
-            </div>
-          </div>
-          <div class="row row-cards">
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-yellow"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service12.jpg
-            )">
-
-                  <div class="card-tags">
-                    <span class="btn btn-pink btn-sm">NEW</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">Serviced Office</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-yellow btn-block">Get a quote</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-yellow"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service08.jpg
-                            )">
-                  <div class="card-tags">
-                    <span class="btn btn-pink btn-sm">NEW</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">Virtual Office</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-yellow btn-block">Get a quote</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-yellow"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service14.jpg
-                            )">
-                  <div class="card-tags">
-                    <span class="btn btn-teal btn-sm">POPULAR</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">Meeting Room</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-yellow btn-block">Get a quote</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-yellow"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service11.jpg
-                            )">
-                  <div class="card-tags">
-                    <span class="btn btn-teal btn-sm">POPULAR</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">Event Space</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-yellow btn-block">Get a quote</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-azure"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service05.jpg
-                                                                        )">
-                  <div class="card-tags">
-                    <span class="btn btn-teal btn-sm">POPULAR</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">Curriculum</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-info btn-block">Get a quote</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-azure"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service03.jpg
-                                            )">
-                  <div class="card-tags">
-                    <span class="btn btn-pink btn-sm">NEW</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">Online Class</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-info btn-block">Get a quote</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-azure"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service04.jpg
-                                                            )">
-                  <div class="card-tags">
-                    <span class="btn btn-teal btn-sm">POPULAR</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">Website Development</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-info btn-block">Get a quote</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-azure"></div>
-                <div class="card-cover text-center" style="background-image: url(./assets/services/service10.jpg
-                                                            )">
-                  <div class="card-tags">
-                    <span class="btn btn-pink btn-sm">NEW</span>
-                  </div>
-                </div>
-                <div class="card-body text-center">
-                  <div class="card-title">App Development</div>
-                </div>
-                <div class="card-footer">
-                  <a href="./contact.html" class="btn btn-info btn-block">Get a quote</a>
-                </div>
+        <!-- End Logo -->
+        <!-- Start Navigation -->
+        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                  <li class="nav-item">
+                    <a href="./index.html" class="nav-link active"
+                      ><i class="fe fe-home"></i> Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="./services.html" class="nav-link"
+                      ><i class="fe fe-layout"></i> Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="./webinars.html" class="nav-link"
+                      ><i class="fe fe-monitor"></i> Webinars</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="./courses.html" class="nav-link"
+                      ><i class="fe fe-book-open"></i> Courses</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="./news.html" class="nav-link"
+                      ><i class="fe fe-file-text"></i> News</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="./alumni.html" class="nav-link"
+                      ><i class="fe fe-users"></i> Alumni</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="./about.html" class="nav-link"
+                      ><i class="fe fe-feather"></i> About</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="./contact.html" class="nav-link"
+                      ><i class="fe fe-mail"></i> Contact</a
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- End Services -->
-      <!-- Start Webinars -->
-      <div class="my-3 my-md-5">
-        <div class="container">
-          <div class="page-header">
-            <h3 class="page-title">
-              Webinars
-            </h3>
-            <div class="page-subtitle">
-              <a href="./webinars.html">See all Webinars</a>
-            </div>
-          </div>
-          <div class="row row-cards">
-            <div class="col-sm-6 col-lg-4">
-              <div class="card">
-                <a href="./webinars.html" class="mb-3">
-                  <img src="./assets/images/webinars/kolla-webinar-07-iabee.jpg" alt="The long and " class="rounded" />
-                </a>
-                <div class="table-responsive">
-                  <table class="table card-table table-striped table-vcenter">
-                    <thead>
-                      <tr>
-                        <th colspan="2">
-                          <h4>
-                            <a href="#">The long and winding road to IABEE</a>
-                          </h4>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Date</td>
-                        <td class="text-nowrap">Thursday, 18 June 2020</td>
-                      </tr>
-                      <tr>
-                        <td>Time</td>
-                        <td class="text-nowrap">14.00 - 16.00 WIB</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-footer">
-                  <a href="http://bit.ly/kolla-iabee" title="bit.ly/kolla-iabee" target="_blank"
-                    class="btn btn-gray btn-block disabled">Closed</a>
-                  <a href="./webinars.html" class="btn btn-outline-info btn-block">More info</a>
-                </div>
+        <!-- End Navigation -->
+        <!-- Start Services -->
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <h3 class="page-title">Services</h3>
+              <div class="page-subtitle">
+                <a href="./services.html">See all Services</a>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4">
-              <div class="card">
-                <a href="./webinars.html" class="mb-3">
-                  <img src="./assets/images/webinars/kolla-webinar-06-accessibility-101.jpg"
-                    alt="Eflyer Kolla Webinar Research Methods in Information Systems" class="rounded img-fluid" />
-                </a>
-                <div class="table-responsive">
-                  <table class="table card-table table-striped table-vcenter">
-                    <thead>
-                      <tr>
-                        <th colspan="2">
-                          <h4><a href="#">Accessibility 101</a></h4>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Date</td>
-                        <td class="text-nowrap">Saturday, 13 June 2020</td>
-                      </tr>
-                      <tr>
-                        <td>Time</td>
-                        <td class="text-nowrap">19.00 - 20.00 WIB</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-footer">
-                  <a href="http://bit.ly/phpid-webinar33" title="bit.ly/phpid-webinar33" target="_blank"
-                    class="btn btn-gray btn-block disabled">Closed</a>
-                  <a href="./webinars.html" class="btn btn-outline-info btn-block">More info</a>
+            <div class="row row-cards">
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-yellow"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service12.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-pink btn-sm">NEW</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">Serviced Office</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-yellow btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <div class="card">
-                <a href="./webinars.html" class="mb-3">
-                  <img src="./assets/images/webinars/kolla-webinar-05-data-science.jpg"
-                    alt="Eflyer Kolla Webinar Research Methods in Information Systems" class="rounded img-fluid" />
-                </a>
-                <div class="table-responsive">
-                  <table class="table card-table table-striped table-vcenter">
-                    <thead>
-                      <tr>
-                        <th colspan="2">
-                          <h4><a href="#">First Step in Data Science</a></h4>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Date</td>
-                        <td class="text-nowrap">Tuesday, 19 May 2020</td>
-                      </tr>
-                      <tr>
-                        <td>Time</td>
-                        <td class="text-nowrap">10.00 - 11.30 WIB</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-yellow"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service08.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-pink btn-sm">NEW</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">Virtual Office</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-yellow btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <a href="http://bit.ly/kolla-data-science" title="bit.ly/kolla-data-science" target="_blank"
-                    class="btn btn-gray btn-block disabled">Closed</a>
-                  <a href="./webinars.html" class="btn btn-outline-info btn-block">More info</a>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-yellow"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service14.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-teal btn-sm">POPULAR</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">Meeting Room</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-yellow btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-yellow"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service11.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-teal btn-sm">POPULAR</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">Event Space</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-yellow btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-azure"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service05.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-teal btn-sm">POPULAR</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">Curriculum</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-info btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-azure"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service03.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-pink btn-sm">NEW</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">Online Class</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-info btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-azure"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service04.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-teal btn-sm">POPULAR</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">Website Development</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-info btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-azure"></div>
+                  <div
+                    class="card-cover text-center"
+                    style="
+                      background-image: url(./assets/services/service10.jpg);
+                    "
+                  >
+                    <div class="card-tags">
+                      <span class="btn btn-pink btn-sm">NEW</span>
+                    </div>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="card-title">App Development</div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./contact.html" class="btn btn-info btn-block"
+                      >Get a quote</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- End Webinars -->
-      <!-- Start Courses -->
-      <div class="my-3 my-md-5">
-        <div class="container">
-          <div class="page-header">
-            <h3 class="page-title">
-              Courses
-            </h3>
-            <div class="page-subtitle">
-              <a href="./courses.html">See all Courses</a>
-            </div>
-          </div>
-          <div class="row row-cards row-deck">
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-orange"></div>
-                <div class="card-body">
-                  <h4 class="mb-3">HTML &amp; CSS</h4>
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        5 sessions
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        2 hours/session
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <a href="./courses.html" class="btn btn-outline-info btn-block">More info</a>
-                </div>
+        <!-- End Services -->
+        <!-- Start Webinars -->
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <h3 class="page-title">Webinars</h3>
+              <div class="page-subtitle">
+                <a href="./webinars.html">See all Webinars</a>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-yellow"></div>
-                <div class="card-body">
-                  <h4 class="mb-3">JavaScript</h4>
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        1 month
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        2 hours/session
-                      </div>
-                    </div>
+            <div class="row row-cards">
+              <div class="col-sm-6 col-lg-4">
+                <div class="card">
+                  <a href="./webinars.html" class="mb-3">
+                    <img
+                      src="./assets/images/webinars/kolla-webinar-07-iabee.jpg"
+                      alt="The long and "
+                      class="rounded"
+                    />
+                  </a>
+                  <div class="table-responsive">
+                    <table class="table card-table table-striped table-vcenter">
+                      <thead>
+                        <tr>
+                          <th colspan="2">
+                            <h4>
+                              <a href="#">The long and winding road to IABEE</a>
+                            </h4>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Date</td>
+                          <td class="text-nowrap">Thursday, 18 June 2020</td>
+                        </tr>
+                        <tr>
+                          <td>Time</td>
+                          <td class="text-nowrap">14.00 - 16.00 WIB</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </div>
-                <div class="card-footer">
-                  <a href="./courses.html" class="btn btn-outline-info btn-block">More info</a>
+                  <div class="card-footer">
+                    <a
+                      href="http://bit.ly/kolla-iabee"
+                      title="bit.ly/kolla-iabee"
+                      target="_blank"
+                      class="btn btn-gray btn-block disabled"
+                      >Closed</a
+                    >
+                    <a
+                      href="./webinars.html"
+                      class="btn btn-outline-info btn-block"
+                      >More info</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-azure"></div>
-                <div class="card-body">
-                  <h4 class="mb-3">React JS</h4>
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        2 months
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        2 hours/session
-                      </div>
-                    </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="card">
+                  <a href="./webinars.html" class="mb-3">
+                    <img
+                      src="./assets/images/webinars/kolla-webinar-06-accessibility-101.jpg"
+                      alt="Eflyer Kolla Webinar Research Methods in Information Systems"
+                      class="rounded img-fluid"
+                    />
+                  </a>
+                  <div class="table-responsive">
+                    <table class="table card-table table-striped table-vcenter">
+                      <thead>
+                        <tr>
+                          <th colspan="2">
+                            <h4><a href="#">Accessibility 101</a></h4>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Date</td>
+                          <td class="text-nowrap">Saturday, 13 June 2020</td>
+                        </tr>
+                        <tr>
+                          <td>Time</td>
+                          <td class="text-nowrap">19.00 - 20.00 WIB</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </div>
-                <div class="card-footer">
-                  <a href="./courses.html" class="btn btn-outline-info btn-block">More info</a>
+                  <div class="card-footer">
+                    <a
+                      href="http://bit.ly/phpid-webinar33"
+                      title="bit.ly/phpid-webinar33"
+                      target="_blank"
+                      class="btn btn-gray btn-block disabled"
+                      >Closed</a
+                    >
+                    <a
+                      href="./webinars.html"
+                      class="btn btn-outline-info btn-block"
+                      >More info</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card">
-                <div class="card-status bg-red"></div>
-                <div class="card-body">
-                  <h4 class="mb-3">SEO</h4>
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        5 sessions
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <div class="text-muted-dark">
-                        <i class="mdi mdi-calendar mr-1 text-muted w-4 text-center"></i>
-                        2 hours/session
-                      </div>
-                    </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="card">
+                  <a href="./webinars.html" class="mb-3">
+                    <img
+                      src="./assets/images/webinars/kolla-webinar-05-data-science.jpg"
+                      alt="Eflyer Kolla Webinar Research Methods in Information Systems"
+                      class="rounded img-fluid"
+                    />
+                  </a>
+                  <div class="table-responsive">
+                    <table class="table card-table table-striped table-vcenter">
+                      <thead>
+                        <tr>
+                          <th colspan="2">
+                            <h4><a href="#">First Step in Data Science</a></h4>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Date</td>
+                          <td class="text-nowrap">Tuesday, 19 May 2020</td>
+                        </tr>
+                        <tr>
+                          <td>Time</td>
+                          <td class="text-nowrap">10.00 - 11.30 WIB</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </div>
-                <div class="card-footer">
-                  <a href="./courses.html" class="btn btn-outline-info btn-block">More info</a>
+                  <div class="card-footer">
+                    <a
+                      href="http://bit.ly/kolla-data-science"
+                      title="bit.ly/kolla-data-science"
+                      target="_blank"
+                      class="btn btn-gray btn-block disabled"
+                      >Closed</a
+                    >
+                    <a
+                      href="./webinars.html"
+                      class="btn btn-outline-info btn-block"
+                      >More info</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- End Courses -->
-      <!-- Start Partners -->
-      <div class="my-3 my-md-5">
-        <div class="container">
-          <div class="page-header">
-            <h3 class="page-title">
-              Partners
-            </h3>
+        <!-- End Webinars -->
+        <!-- Start Courses -->
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <h3 class="page-title">Courses</h3>
+              <div class="page-subtitle">
+                <a href="./courses.html">See all Courses</a>
+              </div>
+            </div>
+            <div class="row row-cards row-deck">
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-orange"></div>
+                  <div class="card-body">
+                    <h4 class="mb-3">HTML &amp; CSS</h4>
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          5 sessions
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          2 hours/session
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="./courses.html"
+                      class="btn btn-outline-info btn-block"
+                      >More info</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-yellow"></div>
+                  <div class="card-body">
+                    <h4 class="mb-3">JavaScript</h4>
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          1 month
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          2 hours/session
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="./courses.html"
+                      class="btn btn-outline-info btn-block"
+                      >More info</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-azure"></div>
+                  <div class="card-body">
+                    <h4 class="mb-3">React JS</h4>
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          2 months
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          2 hours/session
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="./courses.html"
+                      class="btn btn-outline-info btn-block"
+                      >More info</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="card">
+                  <div class="card-status bg-red"></div>
+                  <div class="card-body">
+                    <h4 class="mb-3">SEO</h4>
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          5 sessions
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="text-muted-dark">
+                          <i
+                            class="mdi mdi-calendar mr-1 text-muted w-4 text-center"
+                          ></i>
+                          2 hours/session
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="./courses.html"
+                      class="btn btn-outline-info btn-block"
+                      >More info</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row row-cards">
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center partner-logo">
-                  <a href="https://www.bekraf.go.id/" title="Bekraf" target="_blank"><img
-                      src="./assets/images/partners/logo-bekraf.png" alt="Bekraf Logo" class="img-fluid" /></a>
+        </div>
+        <!-- End Courses -->
+        <!-- Start Partners -->
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <h3 class="page-title">Partners</h3>
+            </div>
+            <div class="row row-cards">
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center partner-logo">
+                    <a
+                      href="https://www.bekraf.go.id/"
+                      title="Bekraf"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-bekraf.png"
+                        alt="Bekraf Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://www.jaskapital.com/" title="Jas Kapital" target="_blank"><img
-                      src="./assets/images/partners/logo-jas-kapital.png" alt="Jas Kapital Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-3">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://www.jaskapital.com/"
+                      title="Jas Kapital"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-jas-kapital.png"
+                        alt="Jas Kapital Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://www.bankmandiri.co.id/" title="Bank Mandiri" target="_blank"><img
-                      src="./assets/images/partners/logo-bank-mandiri.png" alt="Bank Mandiri Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-3">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://www.bankmandiri.co.id/"
+                      title="Bank Mandiri"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-bank-mandiri.png"
+                        alt="Bank Mandiri Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://www.gojek.com/" title="Gojek" target="_blank"><img
-                      src="./assets/images/partners/logo-gojek.png" alt="Gojek Logo" class="img-fluid" /></a>
+              <div class="col-6 col-sm-3">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://www.gojek.com/"
+                      title="Gojek"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-gojek.png"
+                        alt="Gojek Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://tebuireng.online/" title="Pesantren Tebuireng" target="_blank"><img
-                      src="./assets/images/partners/logo-pesantren-tebuireng.gif" alt="Pesantren Tebuireng Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://tebuireng.online/"
+                      title="Pesantren Tebuireng"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-pesantren-tebuireng.gif"
+                        alt="Pesantren Tebuireng Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="http://www.mpkkaj.org/" title="Majelis Pendidikan Katolik" target="_blank"><img
-                      src="./assets/images/partners/logo-majelis-pendidikan-katolik.png"
-                      alt="Majelis Pendidikan Katolik Logo" class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="http://www.mpkkaj.org/"
+                      title="Majelis Pendidikan Katolik"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-majelis-pendidikan-katolik.png"
+                        alt="Majelis Pendidikan Katolik Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="http://unida.gontor.ac.id/" title="Unida Gontor" target="_blank"><img
-                      src="./assets/images/partners/logo-unida-gontor.png" alt="Unida Gontor Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="http://unida.gontor.ac.id/"
+                      title="Unida Gontor"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-unida-gontor.png"
+                        alt="Unida Gontor Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="http://www.vincentius.or.id/" title="Perhimpunan Vincentius Jakarta" target="_blank"><img
-                      src="./assets/images/partners/logo-perhimpunan-vincentius-jakarta.png"
-                      alt="Perhimpunan Vincentius Jakarta Logo" class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="http://www.vincentius.or.id/"
+                      title="Perhimpunan Vincentius Jakarta"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-perhimpunan-vincentius-jakarta.png"
+                        alt="Perhimpunan Vincentius Jakarta Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://kemnaker.go.id/" title="Kemnaker Kementrian Ketenagakerjaan" target="_blank"><img
-                      src="./assets/images/partners/logo-kementrian-ketenagakerjaan.png"
-                      alt="kemnaker Kementrian Ketenagakerjaan Logo" class="img-fluid" /></a>
+              <div class="col-6 col-sm-3">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://kemnaker.go.id/"
+                      title="Kemnaker Kementrian Ketenagakerjaan"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-kementrian-ketenagakerjaan.png"
+                        alt="kemnaker Kementrian Ketenagakerjaan Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://www.menpan.go.id/" title="Kementrian PAN RB" target="_blank"><img
-                      src="./assets/images/partners/logo-kementrian-pan-rb.png" alt="Kementrian PAN RB Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://www.menpan.go.id/"
+                      title="Kementrian PAN RB"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-kementrian-pan-rb.png"
+                        alt="Kementrian PAN RB Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <img src="./assets/images/partners/logo-7-eleven.png" alt="7 Eleven Logo" class="img-fluid" />
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <img
+                      src="./assets/images/partners/logo-7-eleven.png"
+                      alt="7 Eleven Logo"
+                      class="img-fluid"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://www.instagram.com/kcmi_id/" title="Komunitas Coding Mum Indonesia"
-                    target="_blank"><img src="./assets/images/partners/logo-komunitas-coding-mum-indonesia.jpeg"
-                      alt="Komunitas Coding Mum Indonesia Logo" class="img-fluid" /></a>
+              <div class="col-6 col-sm-3">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://www.instagram.com/kcmi_id/"
+                      title="Komunitas Coding Mum Indonesia"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-komunitas-coding-mum-indonesia.jpeg"
+                        alt="Komunitas Coding Mum Indonesia Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://dilo.id/" title="DILo Digital Innovation Lounge" target="_blank"><img
-                      src="./assets/images/partners/logo-dilo.png" alt="DILo Digital Innovation Lounge Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-3">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://dilo.id/"
+                      title="DILo Digital Innovation Lounge"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-dilo.png"
+                        alt="DILo Digital Innovation Lounge Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://www.instagram.com/atc_widyatama/" title="Art Therapy Center Widyatama"
-                    target="_blank"><img src="./assets/images/partners/logo-art-therapy-center-widyatama.jpg"
-                      alt="Art Therapy Center Widyatama Logo" class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://www.instagram.com/atc_widyatama/"
+                      title="Art Therapy Center Widyatama"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-art-therapy-center-widyatama.jpg"
+                        alt="Art Therapy Center Widyatama Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="http://www.kemenparekraf.go.id/" title="Kementrian Parekraf" target="_blank"><img
-                      src="./assets/images/partners/logo-kementrian-parekraf.png" alt="Kementrian Parekraf" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="http://www.kemenparekraf.go.id/"
+                      title="Kementrian Parekraf"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-kementrian-parekraf.png"
+                        alt="Kementrian Parekraf"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="http://sttheresia-jkt.sch.id/" title="Sekolah Theresia" target="_blank"><img
-                      src="./assets/images/partners/logo-sekolah-theresia.jpeg" alt="Sekolah Theresia Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="http://sttheresia-jkt.sch.id/"
+                      title="Sekolah Theresia"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-sekolah-theresia.jpeg"
+                        alt="Sekolah Theresia Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-2">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="https://kanisius.edu/" title="Kolese Kanisius" target="_blank"><img
-                      src="./assets/images/partners/logo-kolese-kanisius.png" alt="Kolese Kanisius Logo"
-                      class="img-fluid" /></a>
+              <div class="col-6 col-sm-2">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="https://kanisius.edu/"
+                      title="Kolese Kanisius"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-kolese-kanisius.png"
+                        alt="Kolese Kanisius Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="card partner-logo">
-                <div class="card-body text-center">
-                  <a href="http://procodecg.com/" title="ProCodeCG" target="_blank"><img
-                      src="./assets/images/partners/logo-procodecg.png" alt="ProCodeCG Logo" class="img-fluid" /></a>
+              <div class="col-6 col-sm-3">
+                <div class="card partner-logo">
+                  <div class="card-body text-center">
+                    <a
+                      href="http://procodecg.com/"
+                      title="ProCodeCG"
+                      target="_blank"
+                      ><img
+                        src="./assets/images/partners/logo-procodecg.png"
+                        alt="ProCodeCG Logo"
+                        class="img-fluid"
+                    /></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- End Partners -->
       </div>
-      <!-- End Partners -->
+      <!-- Start Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row align-items-center flex-row-reverse">
+            <div class="col-sm-2">
+              <a
+                href="./contact.html"
+                title="Contact"
+                class="btn btn-yellow btn-sm"
+                ><i class="fe fe-mail"></i> <strong>CONTACT</strong></a
+              >
+            </div>
+            <div class="col-sm-10">
+              Copyright © 2020
+              <a href="./index.html" title="Kolla.ID"
+                ><strong>Kolla.ID</strong></a
+              >.
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
     </div>
-    <!-- Start Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row align-items-center flex-row-reverse">
-          <div class="col-sm-2">
-            <a href="./contact.html" title="Contact" class="btn btn-yellow btn-sm"><i class="fe fe-mail"></i>
-              <strong>CONTACT</strong></a>
-          </div>
-          <div class="col-sm-10">
-            Copyright © 2020
-            <a href="./index.html" title="Kolla.ID"><strong>Kolla.ID</strong></a>.
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-  </div>
-  <!-- GetButton.io widget -->
-  <script type="text/javascript">
-    (function () {
-      var options = {
-        whatsapp: "+6287880020021", // WhatsApp number
-        call: "+622150201021", // Call phone number
-        call_to_action: "Message us", // Call to action
-        button_color: "#31B646", // Color of button
-        position: "right", // Position may be 'right' or 'left'
-        order: "whatsapp,call", // Order of buttons
-      };
-      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-  </script>
-  <!-- /GetButton.io widget -->
-</body>
-
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+      (function () {
+        var options = {
+          whatsapp: "+6287880020021", // WhatsApp number
+          call: "+622150201021", // Call phone number
+          call_to_action: "Message us", // Call to action
+          button_color: "#31B646", // Color of button
+          position: "right", // Position may be 'right' or 'left'
+          order: "whatsapp,call", // Order of buttons
+        };
+        var proto = document.location.protocol,
+          host = "getbutton.io",
+          url = proto + "//static." + host;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = url + "/widget-send-button/js/init.js";
+        s.onload = function () {
+          WhWidgetSendButton.init(host, proto, options);
+        };
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+      })();
+    </script>
+    <!-- /GetButton.io widget -->
+  </body>
 </html>
